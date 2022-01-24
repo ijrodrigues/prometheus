@@ -1,6 +1,7 @@
 scrape_configs:
   - job_name: probot
-    metrics_path: /probot/metrics
+    scrape_interval: 60s
+    metrics_path: /actuator/prometheus
     static_configs:
       - targets:
         - '{{PROBOT_HOST}}'
